@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productos</title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+  <style>
+
+    .tittle{
+      margin-left: 8px;
+      margin-right: 8px;
+      border-radius: 8px;
+      text-align: center;
+      font-family:'Courier New', Courier, monospace;
+      background-color: rgba(127, 255, 212, 0.441);
+      border: solid black;
+    }
+
+    .sub{
+      margin-left: 8px;
+      background-color: rgba(127, 142, 255, 0.441);
+      margin-right: 8px;
+      border-radius: 10px;
+      text-align: center;
+      border: solid black;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    .container{
+      width: auto;
+      text-align: center;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: large;
+    }
+
+input[type=text] {
+  width: 1000px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid #555;
+  outline: none;
+}
+
+input[type=text]:focus {
+  background-color: lightblue;
+}
+
+input[type=number] {
+  width: 1000px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid #555;
+  outline: none;
+}
+
+input[type=number]:focus {
+  background-color: lightblue;
+}
+
+  .button{
+  background-color: #5ccf60; 
+  border: none;
+  color: black;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  transition-duration: 0.4s;
+}
+
+.button2:hover{
+background-color: #00bfff;
+color: black;
+}
+.button3:hover{
+background-color: #ff0f0f;
+color: black;
+}
+.button4:hover{
+background-color: #ffffff;
+color: black;
+}
+.button5:hover{
+background-color: #008bba;
+color: black;
+}
+.button6:hover{
+background-color: #05ff2f;
+color: black;
+}
+
+.button2 {background-color: #05526b; color: white; border: 2px solid black;} /* Blue */
+.button3 {background-color: #f44336b0; color: white; border: 2px solid black;} /* Red */ 
+.button4 {background-color: #8b8989; color: white;border: 2px solid black;} /* Gray */ 
+.button5 {background-color: #555555; color: white; border: 2px solid black;} /* Black */
+.button6 {background-color: #00590ff7; color: white; border: 2px solid black;} /* green */
+  </style>
+  
+</head>
+<body>
+  
+  <script src="Productos.js"></script>
+  <header>
+    <h1 class="tittle">Control de Inventario</h1>
+    <h2 class="sub">Arboles biarios</h2>
+  </header>
+  <div id="app" class="container">
+    <section>
+
+      <form id="prod">
+        <b>Codigo:</b> <br><label for="txtCod"> <input type="number" id="txtCod"> </label><br><br>
+        <b>Nombre:</b> <br><label for="txtNom"> <input type="text" id="txtNom"> </label><br><br>
+        <b>Precio:</b> <br><label for="txtPrec"> <input type="number" id="txtPrec"> </label><br><br>
+        <b>Cantidad:</b> <br><label for="txtCan"> <input type="number" id="txtCan"> </label>
+      </form><br>
+
+      <button type="button" id="btnAdd" class="button button6 material-icons">save  AGREGAR</button>
+      <button type="button" id="btnFind" class="button button4 glyphicon glyphicon-search"> BUSCAR</button>
+      <button type="button" id="btnInO" class="button button2">inOrder</button>
+      <button type="button" id="btnPreO" class="button button2">preOrder</button>
+      <button type="button" id="btnPostO" class="button button2">postOrder</button>
+      <button type="reset" class="button button3 glyphicon glyphicon-remove"> CANCELAR</button>
+      <button type="button" id="btnDel" class="button button3 glyphicon glyphicon-remove"> BORRAR DETALLES</button>
+
+    </section>
+  </div>
+
+  <div id="detalles"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
